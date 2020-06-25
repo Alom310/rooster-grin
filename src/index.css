@@ -274,6 +274,10 @@ font-weight :400;
   height: 80vh;
 }
 
+.primary-title--features{
+  color: black;
+}
+
 .features-icons-top, .features-icons-bottom{
   display: inline-block;
   height: 50%;
@@ -281,6 +285,10 @@ font-weight :400;
 
 .features-icons-top {
   top: 30%;
+}
+
+#icons-row{
+  background-color: #fafafa;
 }
 
 #icons{
@@ -327,15 +335,23 @@ font-weight :400;
   width: 600px;
 }
 
+#carousel-row{
+  background-color: #fafafa;
+}
+
 #carousel p{
   font-size: 1rem;
   text-align: left;
   padding: 2rem 4rem;
+  background-color: #fafafa;
+  margin:0;
 }
 
 #carousel h6{
   color: #613475;
   font-weight: 700;
+  background-color: #fafafa;
+  margin:0;
 }
 
 .carousel__text-box{
@@ -371,7 +387,8 @@ i{
 /* ---------------------------------Footer--------------------------------*/
 footer{
   text-align: center;
-  margin: 10px 0 10px 0;
+  margin-bottom: 10px;
+  background: #fafafa;
 }
 
 h5{

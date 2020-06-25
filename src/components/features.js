@@ -26,7 +26,7 @@ class Features extends Component{
                             </div>
                         </div>
         
-                        <div className="col-xs-12 col-lg-6">
+                        <div className="col-xs-12 col-lg-6" id="icons-row">
                             <div className="col-xs-12 col-lg-6 features-icons-top icons-left">
                                 <img id="icons" src={icon1} alt=""/>
                                 <p>Clipboards</p>

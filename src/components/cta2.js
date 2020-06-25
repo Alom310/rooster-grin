@@ -17,7 +17,7 @@ class CTA2 extends Component{
                                         <span className="primary-title">Start Your Trial Today!</span>
                                     </h1>
                                 </Fade>
-                                <a href="#reviews" className="section-btn section-btn--cta">&#62; Learn More</a>
+                                <a href="#reviews" className="section-btn section-btn--cta">Learn More</a>
                             </div>
                         </div>
                     </div>
