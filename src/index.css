@@ -17,6 +17,7 @@ code {
   height: 100%;
 }
 
+
 /* ---------------------------------Animations--------------------------------*/
 @keyframes fadeInAnimation { 
   0% { 
@@ -195,7 +196,8 @@ code {
   text-align: left;
 }
 
-.about-primary--title, .features-primary--title, .cta1-primary--title, .cta2-primary--title{
+.about-primary--title, .features-primary--title,
+.cta1-primary--title, .cta2-primary--title, .review-primary--title{
 color: #613475;
 display: block;
 font-size: 3rem;
@@ -372,11 +374,77 @@ font-weight :400;
 
 
 /* ---------------------------------Reviews--------------------------------*/
+#reviews{
+  height: 60vh;
+  overflow: auto;
+}
+
+#review-row{
+  position: relative;
+}
+
+.review__text-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.review-primary--title{
+  color: black;
+}
+
+#carousel{
+  width: 600px;
+}
+
+#carousel p{
+  font-size: 1rem;
+  text-align: left;
+  padding: 2rem 4rem;
+}
+
+#carousel h6{
+  color: #613475;
+  font-weight: 700;
+}
+
+.carousel__text-box{
+  position: absolute;
+  top: 20%;
+  text-align: left;
+}
+
+i{
+  color: #ff7218;
+}
+
+.carousel .slide{
+  background-color: white !important;
+}
+
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #613475 !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #613475 !important;
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow{
+  opacity: 1 !important;
+}
+
+.carousel .control-dots .dot {
+  background-color: #ffc718 !important;
+}
 
 /* ---------------------------------Footer--------------------------------*/
 footer{
   text-align: center;
-  margin: 10px;;
+  margin: 10px 0 10px 0;
 }
 
 h5{
@@ -389,8 +457,10 @@ h5{
 }
 
 /* ---------------------------------Media Queries--------------------------------*/
-@media (max-width: 1500px) {
-
+@media (max-width: 1200px) {
+  #carousel{
+    width: 500px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -431,6 +501,36 @@ h5{
 
   .cta2-div{
     display:none;
+  }
+
+  .carousel__text-box{
+    top: 0%;
+    left:0%
+  }
+
+  .review__text-box {
+    position: relative;
+    top: 30%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    text-align: center;
+  }
+
+  #carousel{
+    width: 100%;
+  }
+
+}
+
+
+
+@media (max-width: 630px) {
+  #carousel{
+    width: 100%;
+  }
+
+  .carousel__text-box{
+    left:0%
   }
 
 }

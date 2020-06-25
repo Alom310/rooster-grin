@@ -14,7 +14,7 @@ class CTA2 extends Component{
                             <div className="cta2__text-box">
                                 <Fade left>
                                     <h1 className="cta2-primary">
-                                        <span className="cta2-primary--title">Free 30 day Trial</span>
+                                        <span className="cta2-primary--title">Start Your Trial Today!</span>
                                     </h1>
                                 </Fade>
                                 <a href="#" className="cta2-btn cta2-btn--animated">&#62; Learn More</a>
