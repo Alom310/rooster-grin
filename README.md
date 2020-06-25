@@ -1,3 +1,5 @@
+Website has been deployed at https://alom-rooster-grin.herokuapp.com/
+
 1. What technologies did you used and why (if you only used html, css, and js please explain any templates or frameworks you may have used i.e. bootstrap)?
 
 The tech stack I used was React, HTML, CSS, and bootstrap for its grid system. I decided to use React as my frontend framework because I wanted to gain a refresher from it since it has been a while since I last used React. 
