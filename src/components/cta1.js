@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import Fade from 'react-reveal/Fade';
-import banner1 from '../assets/banner-1.jpg'
-
 
 class CTA1 extends Component{
     render(){
