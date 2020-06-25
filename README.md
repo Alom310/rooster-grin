@@ -6,7 +6,7 @@ The tech stack I used was React, HTML, CSS, and bootstrap for its grid system. I
 
 2. Any struggles you faced when developing with technology you chose?
 
-The biggest challenges I face was properly fitting divs in its section with the grid system and then having it be mobile responsive too. Another challenge was getting the carousel to work correctly.
+The biggest challenges I faced was properly fitting DIVs in its section with the grid system and then having it be responsive in mobile views too. Another challenge was getting the carousel to work correctly.
 
 
 3. What you enjoyed the most and why?
