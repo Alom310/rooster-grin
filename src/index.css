@@ -8,15 +8,61 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
 }
 
 .container, .row{
   height: 100%;
 }
 
+.container{
+  max-width: 100% !important;
+  padding: 0;
+}
+
+.row{
+  margin:0;
+}
+.col-lg-6{
+  padding:0 !important;
+}
+
+.primary-title{
+color: #613475;
+display: block;
+font-size: 3rem;
+font-weight:700;
+text-transform: uppercase;
+}
+
+/* ---------------------------------Button--------------------------------*/
+
+.section-btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: .5rem 1rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1rem;
+  color: #613475;
+  /*change for the <button> element*/
+  border: none;
+  cursor: pointer;
+}
+
+.section-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  text-decoration: none;
+  background-color: #613475;
+  color: white;
+}
+
+.section-btn:hover::after{
+  transform:scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 
 /* ---------------------------------Animations--------------------------------*/
 @keyframes fadeInAnimation { 
@@ -66,7 +112,6 @@ code {
       transform: translateY(3rem);
   }
 
-
   100%{
       opacity: 1;
       transform: translate(0);
@@ -93,7 +138,7 @@ code {
 }
 
 .header__logo{
-      height: 3.5rem;
+  height: 3.5rem;
 }
 
 .header__text-box {
@@ -166,22 +211,8 @@ code {
 }
 
 /* ---------------------------------About Section--------------------------------*/
-
-.container{
-  max-width: 100% !important;
-  padding: 0;
-}
-
-.row{
-  margin:0;
-}
-
 #img-1{
   width: 100%;
-}
-
-.col-lg-6{
-  padding:0 !important;
 }
 
 #about-row{
@@ -196,15 +227,6 @@ code {
   text-align: left;
 }
 
-.about-primary--title, .features-primary--title,
-.cta1-primary--title, .cta2-primary--title, .review-primary--title{
-color: #613475;
-display: block;
-font-size: 3rem;
-font-weight:700;
-text-transform: uppercase;
-}
-
 .about-primary--p{
 color: black;
 display: block;
@@ -212,36 +234,7 @@ font-size: 1rem;
 font-weight :400;
 }
 
-.about-btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: .5rem 1rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1rem;
-  color: #613475;
-  /*change for the <button> element*/
-  border: none;
-  cursor: pointer;
-  animation: moveInButton .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}
-
-.about-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
-  text-decoration: none;
-  background-color: #613475;
-  color: white;
-}
-
-.about-btn:hover::after{
-  transform:scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-
-/* ---------------------------------Call To Action 1--------------------------------*/
+/* ---------------------------------Call To Action --------------------------------*/
 #cta1{
   background-image: url(assets/banner-1.jpg);
   background-position: top;
@@ -250,16 +243,20 @@ font-weight :400;
   height: 80vh;
 }
 
-.cta1-container{
-  height: 100%;
+#cta2{
+  background-image: url(assets/banner-2.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
 }
 
-.cta1-row{
+.cta-row{
   position: relative;
   height: 100%;
 }
 
-.cta1__text-box{
+.cta__text-box{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -267,31 +264,9 @@ font-weight :400;
   text-align: left;
 }
 
-.cta1-btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: .5rem 1rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1rem;
+.section-btn--cta {
   color: white;
   background-color: #ff7218 ;
-  /*change for the <button> element*/
-  border: none;
-  cursor: pointer;
-}
-
-.cta1-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
-  text-decoration: none;
-  background-color: #613475;
-  color: white;
-}
-
-.cta1-btn:hover::after{
-  transform:scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 /* ---------------------------------Features--------------------------------*/
@@ -313,65 +288,18 @@ font-weight :400;
   padding: .5rem .6rem;
   border-radius: 60px;
   border: 2px #613475 solid;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition:transform .8s ease-in-out;
+}
+
+#icons:hover{
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 
 .icons-left{
   text-align: center;
 }
-
-/* ---------------------------------Call To Action 2--------------------------------*/
-#cta2{
-  background-image: url(assets/banner-2.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
-}
-
-.cta2-container{
-  height: 100%;
-}
-
-.cta2-row{
-  position: relative;
-  height: 100%;
-}
-
-.cta2__text-box{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-}
-
-.cta2-btn {
-  text-decoration: none;
-  display: inline-block;
-  padding: .5rem 1rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1rem;
-  color: white;
-  background-color: #ff7218 ;
-  /*change for the <button> element*/
-  border: none;
-  cursor: pointer;
-}
-
-.cta2-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
-  text-decoration: none;
-  background-color: #613475;
-  color: white;
-}
-
-.cta2-btn:hover::after{
-  transform:scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 
 /* ---------------------------------Reviews--------------------------------*/
 #reviews{
@@ -391,7 +319,7 @@ font-weight :400;
   text-align: left;
 }
 
-.review-primary--title{
+.primary-title--review{
   color: black;
 }
 
@@ -423,7 +351,6 @@ i{
 .carousel .slide{
   background-color: white !important;
 }
-
 
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid #613475 !important;
@@ -495,7 +422,7 @@ h5{
     height: 20%;
   }
 
-  .features-primary--title{
+  .primary-title--features{
     font-size: 2rem;
   }
 
@@ -522,8 +449,6 @@ h5{
 
 }
 
-
-
 @media (max-width: 630px) {
   #carousel{
     width: 100%;
@@ -532,10 +457,7 @@ h5{
   .carousel__text-box{
     left:0%
   }
-
 }
 
-
 @media (max-width: 400px) {
-
 }

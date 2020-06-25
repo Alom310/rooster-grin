@@ -9,8 +9,8 @@ class Footer extends Component{
                 <div>
                     <h5>Follow Us:</h5>
                     <div>
-                        <img id="footer-logo" src={Instagram_logo} />
-                        <img id="footer-logo" src={Facebook_logo} />
+                        <a href="https://img.photobucket.com/albums/v116/maestros/Nature/Rooster.jpg" target="_blank"><img id="footer-logo" src={Instagram_logo} /></a>
+                        <a href="https://www.facebook.com/RoosterGrin/" target="_blank"><img id="footer-logo" src={Facebook_logo} /></a> 
                     </div>
                 </div>
             </footer>

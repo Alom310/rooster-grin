@@ -18,11 +18,11 @@ class Features extends Component{
                             <div className="about__text-box">
                                 <Fade left>
                                 <h1 className="about-primary">
-                                    <span className="features-primary--title">Learn About Our Features</span>
+                                    <span className="primary-title primary-title--features">Learn About Our Features</span>
                                 </h1>
                                 </Fade>
                                 <p className="about-primary--p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur tempora recusandae ab possimus incidunt voluptatem totam. Asperiores placeat, animi, iusto distinctio dolor dolorum quam minus sint exercitationem commodi eaque culpa.</p>
-                                <a href="#" className="about-btn about-btn--animated">&#62; Learn More</a>
+                                <a href="#cta2" className="section-btn">&#62; Learn More</a>
                             </div>
                         </div>
         

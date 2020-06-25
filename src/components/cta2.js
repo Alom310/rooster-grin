@@ -5,19 +5,19 @@ class CTA2 extends Component{
     render(){
         return(
             <section id="cta2">
-                <div className="container cta2-container">
-                    <div className="row cta2-row" >
+                <div className="container cta-container">
+                    <div className="row cta-row" >
 
                         <div className="col-xs-12 col-lg-6 cta2-div">
                         </div>
                         <div className="col-xs-12 col-lg-6">
-                            <div className="cta2__text-box">
+                            <div className="cta__text-box">
                                 <Fade left>
-                                    <h1 className="cta2-primary">
-                                        <span className="cta2-primary--title">Start Your Trial Today!</span>
+                                    <h1 className="cta-primary">
+                                        <span className="primary-title">Start Your Trial Today!</span>
                                     </h1>
                                 </Fade>
-                                <a href="#" className="cta2-btn cta2-btn--animated">&#62; Learn More</a>
+                                <a href="#reviews" className="section-btn section-btn--cta">&#62; Learn More</a>
                             </div>
                         </div>
                     </div>

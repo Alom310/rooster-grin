@@ -15,14 +15,14 @@ class Reviews extends Component{
                             <div className="review__text-box">
                                 <Fade left>
                                 <h1 className="review-primary">
-                                    <span className="review-primary--title">Read Our Reviews!</span>
+                                    <span className="primary-title primary-title--review">Read Our Reviews!</span>
                                 </h1>
                                 </Fade>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
+                                <i className="fa fa-star" aria-hidden="true"></i>
 
                             </div>
                         </div>
