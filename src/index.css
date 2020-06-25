@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;    
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +11,328 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container, .row{
+  height: 100%;
+}
+
+/* ---------------------------------Animations--------------------------------*/
+@keyframes fadeInAnimation { 
+  0% { 
+      opacity: 0; 
+  } 
+  100% { 
+      opacity: 1; 
+  } 
+}
+
+@keyframes moveInLeft {
+  0%{
+      opacity: 0;
+      transform: translateX(-10rem);
+  }
+
+  80%{
+      transform: translateX(1rem);
+  }
+
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0%{
+      opacity: 0;
+      transform: translateX(10rem);
+  }
+
+  80%{
+      transform: translateX(-1rem);
+  }
+
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+@keyframes moveInButton {
+  0%{
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+
+  100%{
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+/* ---------------------------------Header Section--------------------------------*/
+
+.header {
+  height: 100vh;
+  background-image: url(assets/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  animation: fadeInAnimation ease 3s; 
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards; 
+}
+
+.header__logo-box{
+  position: absolute;
+  top: 2rem;
+  left: 14rem;
+}
+
+.header__logo{
+      height: 3.5rem;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: white;
+}
+
+.heading-primary--main{
+  display: block;
+  font-size: 4rem;
+  font-weight:700;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  -webkit-text-stroke: 3px white;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-primary--sub{
+  display: block;
+  font-size: 3rem;
+  font-weight:700;
+  letter-spacing: .3rem;
+  animation: moveInRight 1s ease-out;
+}
+
+.home-btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-block;
+  transition: all .2s;
+  position: relative;
+  font-size: 16px;
+
+  /*change for the <button> element*/
+  border: none;
+  cursor: pointer;
+}
+
+.home-btn--purple{
+  background-color: #ac5fd1;
+  color: white;
+}
+
+.home-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  color:white;
+  text-decoration: none;
+}
+
+.home-btn:hover::after{
+  transform:scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.home-btn--animated{
+  animation: moveInButton .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+/* ---------------------------------About Section--------------------------------*/
+
+.container{
+  max-width: 100% !important;
+  padding: 0;
+}
+
+.row{
+  margin:0;
+}
+
+#img-1{
+  width: 100%;
+}
+
+.col-lg-6{
+  padding:0 !important;
+}
+
+#about-row{
+  position: relative;
+}
+
+.about__text-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.about-primary--title, .cta1-primary--title{
+color: #613475;
+display: block;
+font-size: 3rem;
+font-weight:700;
+text-transform: uppercase;
+}
+
+.about-primary--p{
+color: black;
+display: block;
+font-size: 1rem;
+font-weight :400;
+}
+
+.about-btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: .5rem 1rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1rem;
+  color: #613475;
+  /*change for the <button> element*/
+  border: none;
+  cursor: pointer;
+  animation: moveInButton .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  text-decoration: none;
+  background-color: #613475;
+  color: white;
+}
+
+.about-btn:hover::after{
+  transform:scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+
+/* ---------------------------------Call To Action 1--------------------------------*/
+#cta1{
+  background-image: url(assets/banner-1.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+.cta1-container{
+  height: 100%;
+}
+
+.cta1-row{
+  position: relative;
+  height: 100%;
+}
+
+.cta1__text-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.cta1-btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: .5rem 1rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff7218 ;
+  /*change for the <button> element*/
+  border: none;
+  cursor: pointer;
+}
+
+.cta1-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  text-decoration: none;
+  background-color: #613475;
+  color: white;
+}
+
+.cta1-btn:hover::after{
+  transform:scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* ---------------------------------Features--------------------------------*/
+#features{
+  height: 80vh;
+}
+
+.features-icons-top, .features-icons-bottom{
+  display: inline-block;
+  height: 50%;
+}
+
+.features-icons-top {
+  top: 30%;
+}
+
+
+#icons{
+  width: 20%;
+  border: 1px black solid;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+
+/* ---------------------------------Media Queries--------------------------------*/
+@media (max-width: 991px) {
+  .about__text-box {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+
+  }
+}
+
+
+@media (max-width: 400px) {
+  .header__logo-box{
+      left: 2rem;
+  }
+
+  .header__logo{
+      height: 2rem;
+  }
 }
